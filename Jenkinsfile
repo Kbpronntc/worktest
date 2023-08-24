@@ -12,7 +12,7 @@ jobs:
   
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest {
     steps:
       - name: Trigger jenkins job
         uses: joshlk/jenkins-githubaction@main
