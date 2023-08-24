@@ -20,8 +20,8 @@ jobs:
         with:
           url: http://158.160.71.177:32000
           job_name: jenkins_run
-          username: $user
-          password: $!QAZxsw2
+          username: user
+          password: !QAZxsw2
           timeout: "1000"
 pipline {
 	agent any
