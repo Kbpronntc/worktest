@@ -1,5 +1,8 @@
 pipline {
 	agent any
+	              
+        - name: Jenkins-Action            
+          uses: joshlk/jenkins-githubaction@V0.0.1
 	
 	stages {
 		stage('Git Stage') {
