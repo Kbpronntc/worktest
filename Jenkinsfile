@@ -1,6 +1,5 @@
+pipline {
 name: jenkins-CI
-
-# Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
@@ -23,7 +22,7 @@ jobs:
           username: user
           password: !QAZxsw2
           timeout: "1000"
-pipline {
+}
 	agent any
 	              
         - name: Jenkins-Action            
