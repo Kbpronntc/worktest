@@ -1,11 +1,11 @@
 #!/bin/bash
-. $ENV_FILE 
-HTTP_CODE=$(curl --write-out "%{http_code}\n" $URL1 --output output.txt --silent)
-echo $HTTP_CODE 
+source ./url.sh
+HTTP_CODE=$(curl --write-out "%{http_code}\n" "$URL1" --output output.txt --silent)
+echo $URL1 $HTTP_CODE
 
 function testEndpointAvailability {
     # -L is used to ensure cURL follows up to 30 status changes through to the end.
-    # Without the -L, cURL will stop at the Apache reverse-proxy 301 status instead of listening for 
+    # Without the -L, cURL will stop at the Apache reverse-proxy 301 status instead of listening for
     # the eventual response.
     endpointResponse=$(curl -oL --write-out '%{http_code}\n' --silent --head "${endpointToValidate}")
 
