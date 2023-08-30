@@ -13,7 +13,8 @@ pipeline {
 	stage('run bush') {
 			steps { 
 		sh 'chmod +x ./bash.sh'
-		sh './worktest/bash.sh'		
+		sh("${WORKSPACE}/worktest/bash.sh")
+				
                 
 	    } 
 	}           
