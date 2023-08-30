@@ -12,10 +12,11 @@ pipeline {
 			}
 		}    
 	stage('run bush') {
-			steps { 
-		sh "chmod +x -R ./jenkins"
-		sh "./jenkins/script/bash.sh"		
-                
+			steps {
+			  script {
+		sh "chmod +x ./bash.sh"
+		sh "./bash.sh"		
+		}  
 	    } 
 	}           
     }
