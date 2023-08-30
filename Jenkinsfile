@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+    options {
+        timeout(time: 5, unit: 'SECONDS')
+    }
 	
     stages {
 	stage('git stage') {
@@ -11,7 +13,7 @@ pipeline {
 	stage('run bush') {
 			steps { 
 		sh 'chmod +x ./bash.sh'
-                sh './bash.sh'
+                
 	    } 
 	}           
     }
