@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 source ./url.sh
 HTTP_CODE=$(curl --write-out "%{http_code}\n" "$URL1" --output output.txt --silent)
 echo $URL1 $HTTP_CODE
