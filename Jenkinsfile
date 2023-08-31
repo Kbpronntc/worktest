@@ -14,8 +14,8 @@ pipeline {
 	stage('run bush') {
 			steps {
 			  script {
-		sh "chmod +x ./bash.sh"
-		sh "./bash.sh"		
+		sh "chmod +x bash.sh"
+		sh "bash.sh"		
 		}  
 	    } 
 	}           
