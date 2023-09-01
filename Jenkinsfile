@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'python'
+        label any
     }
     stages {
         stage('git stage') {
