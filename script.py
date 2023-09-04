@@ -12,5 +12,5 @@ pprint(result.text)
 # pprint(result.json())
 
 
-with open("current_result.txt", "w", encoding="utf-8") as file:
+# with open("current_result.txt", "w", encoding="utf-8") as file:
     file.write(result.text)
